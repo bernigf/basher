@@ -223,7 +223,7 @@ parse_git_branch(){
 
 update_prompt(){
     #PS1="< \[$(tput setaf 3)\]${VIRTUAL_ENV##*/}\[\033[00m\]:\[\033[01;38m\]$ENV\[\033[00m\] \[\033[00m\]>\[$(tput sgr0)\] ${debian_chroot:+($debian_chroot)}\[\033[01;33m\]\u\[\033[01;32m\]@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[\033[01;35m\]{\[\$(parse_git_branch)\]} \[\033[00m\]\n\$ "
-    PS1="\[$(tput sgr0)\] ${debian_chroot:+($debian_chroot)}\[\033[01;33m\]\u\[\033[01;32m\]@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[\033[01;35m\]{\[\$(parse_git_branch)\]} \[\033[00m\]\n\$ "
+    PS1="\[$(tput sgr0)\]${debian_chroot:+($debian_chroot)}\[\033[01;33m\]\u\[\033[01;32m\]@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[\033[01;35m\]{\[\$(parse_git_branch)\]} \[\033[00m\]\n\$ "
 }
 
 if [ "$color_prompt" = yes ]; then

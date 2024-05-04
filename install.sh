@@ -1,7 +1,7 @@
 #!/bin/bash
 
 name="basher"
-version="0.0.1"
+version="0.0.2"
 
 folder_main="~/"
 folder_colors="colors"
@@ -36,6 +36,10 @@ echo ""
 #echo "Creating ~/$folder_main/$file_history"
 #eval "touch ~/$folder_main/$file_history"
 #echo ""
+
+current_timestamp=$(date +%Y%m%d%H%M%S)
+echo "Saving current .bashrc backup to .bashrc.$current_timestamp"
+eval "mv ~/.bashrc ~/.bashrc.$current_timestamp"
 
 echo "Copying $name files..."
 echo ""
