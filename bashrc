@@ -2,10 +2,13 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+basher_version="0.0.3"
+
 # -----
 # Workspaces aliases
 # -----
-alias ws="cd ~/repos/repo_name; source venv/bin/activate"
+alias setenv='source repo_name/bin/activate'
+alias ws="cd ~/repos/repo_name; setenv"
 alias wr="ws; workon repo_name; env_remote; env_staging; shell"
 
 # -----
@@ -122,6 +125,7 @@ export PATH="$HOME/.local/bin:$PATH"
 # alias staging_db='cd ~/repo/repo_name; workon repo_name; set -o allexport; source $(pwd)/environments/remote*; set +o allexport; set -o allexport; source $(pwd)/environments/staging*; set +o allexport; python service/manage.py dbshell'
 # alias staging_debug='cd ~/repo/repo_name; workon repo_name; set -o allexport; source $(pwd)/environments/remote*; set +o allexport; set -o allexport; source $(pwd)/environments/staging*; set +o allexport'
 alias runserver='python service/manage.py runserver'
+alias runiserver='python manage.py runserver 0.0.0.0:8000'
 alias shell='python service/manage.py shell_plus'
 alias test='pytest'
 alias stest='pytest -vv -s'
