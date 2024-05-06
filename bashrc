@@ -2,14 +2,30 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-basher_version="0.0.5"
+basher_version="0.0.7"
+
+working_repo='repo_name'
+repos_path='~/repos'
+working_env='venv'
+
+function basher(){
+    echo ''
+    echo 'Basher Version: '$basher_version
+    echo ''
+    
+    echo 'working_repo='$working_repo
+    echo 'working_env='$working_env
+    echo ''
+}
+alias basher='basher'
 
 # -----
 # Workspaces aliases
 # -----
-alias setenv='source repo_name/bin/activate'
-alias ws="cd ~/repos/repo_name; setenv"
-alias wr="ws; workon repo_name; env_remote; env_staging; shell"
+alias setenv='source '$working_env'/bin/activate'
+alias ws="cd "$repos_path"/"$working_repo"; setenv"
+alias wr="ws; workon "$working_repo"; setenv; shell"
+
 
 # -----
 # Dev search aliases
