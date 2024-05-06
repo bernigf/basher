@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-basher_version="0.0.3"
+basher_version="0.0.5"
 
 # -----
 # Workspaces aliases
@@ -15,17 +15,20 @@ alias wr="ws; workon repo_name; env_remote; env_staging; shell"
 # Dev search aliases
 # -----
 alias codesearch="grep -nr $1 --exclude-dir='.git' --exclude-dir=node_modules --exclude-dir=venv"
+alias cs='codesearch'
 
 # -----
 # Git related aliases
 # -----
 alias gitu="git config user.email"
 alias gitsu="git config --global user.email $1"
+# enable tab completion for git
+source /usr/local/etc/bash_completion.d/git-completion.bash
 
 # -----
 # ls aliases
 # -----
-alias ls="ls -Glha"
+alias ls="ls -Glha --color=auto"
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
