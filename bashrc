@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-basher_version="0.0.7"
+basher_version="0.0.7a"
 
 working_repo='repo_name'
 repos_path='~/repos'
@@ -15,6 +15,7 @@ function basher(){
     
     echo 'working_repo='$working_repo
     echo 'working_env='$working_env
+    echo 'repos_path='$repos_path
     echo ''
 }
 alias basher='basher'
@@ -25,7 +26,7 @@ alias basher='basher'
 alias setenv='source '$working_env'/bin/activate'
 alias ws="cd "$repos_path"/"$working_repo"; setenv"
 alias wr="ws; workon "$working_repo"; setenv; shell"
-
+alias cdr="cd "$repos_path"/"$working_repo
 
 # -----
 # Dev search aliases
