@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-basher_version="0.0.7e"
+basher_version="0.0.7g"
 
 working_repo='repo_name'
 repos_path='~/repos'
@@ -27,6 +27,11 @@ alias setenv='source '$working_env'/bin/activate'
 alias ws="cd "$repos_path"/"$working_repo"; setenv"
 alias wr="ws; workon "$working_repo"; setenv; shell"
 alias cdr="cd "$repos_path"/"$working_repo
+
+# -----
+# OS related aliases
+# -----
+alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
 
 # -----
 # Dev search aliases
