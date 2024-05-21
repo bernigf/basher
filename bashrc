@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-basher_version="0.0.7g"
+basher_version="0.0.9"
 
 working_repo='repo_name'
 repos_path='~/repos'
@@ -42,6 +42,8 @@ alias cs='codesearch'
 # -----
 # Git related aliases
 # -----
+alias gitlc="git log --format='%h %Cgreen%ar%Creset %s' $(git rev-parse --abbrev-ref HEAD) --not $(git merge-base $(git rev-parse --abbrev-ref HEAD) main)"
+alias gitlb="git for-each-ref --sort=-committerdate refs/remotes/origin --format='%(committerdate:relative)%09 %(refname:short)'"
 alias gitu="git config user.email"
 alias gitsu="git config --global user.email $1"
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 name="basher"
-version="0.0.7g"
+version="0.0.9"
 
 folder_main="~/"
 folder_colors="colors"
