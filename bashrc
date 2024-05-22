@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-basher_version="0.0.9"
+basher_version="0.0.9a"
 
 working_repo='repo_name'
 repos_path='~/repos'
@@ -48,10 +48,11 @@ alias gitu="git config user.email"
 alias gitsu="git config --global user.email $1"
 
 # enable tab completion for git on linux
+# source /usr/share/bash-completion/completions/git
 # source /usr/share/bash_completion.d/completions/git-completion.bash
 # source /usr/local/etc/bash_completion.d/git-completion.bash
 
-# enable tab completion got git on mac
+# enable tab completion for git on mac
 source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
 
 # -----
