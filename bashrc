@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-basher_version="0.0.9a"
+basher_version="0.0.9b"
 
 working_repo='repo_name'
 repos_path='~/repos'
@@ -24,6 +24,7 @@ alias basher='basher'
 # Workspaces aliases
 # -----
 alias setenv='source '$working_env'/bin/activate'
+alias sv='source ./venv/bin/activate'
 alias ws="cd "$repos_path"/"$working_repo"; setenv"
 alias wr="ws; workon "$working_repo"; setenv; shell"
 alias cdr="cd "$repos_path"/"$working_repo
