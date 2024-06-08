@@ -37,7 +37,34 @@ alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
 # -----
 # Dev search aliases
 # -----
-alias codesearch="grep -nr $1 --exclude-dir='.git' --exclude-dir=node_modules --exclude-dir=venv"
+#alias codesearch="grep --color=always -nr $1 --exclude-dir='.git' --exclude-dir=node_modules --exclude-dir=venv"
+alias codesearch='function _codesearch() {
+    local pattern="$1"
+    grep -nr --color=always "$pattern" ./ --exclude-dir=".git" --exclude-dir=node_modules --exclude-dir=venv | awk '"'"'
+    {
+        filename_color = "\033[35m";
+        line_number_color = "\033[32m";
+        reset_color = "\033[0m";
+        pattern_color = "\033[01;31m";
+        pattern = "'"'"'"$pattern"'"'"'";
+
+        # Split the input line into filename, line number, and the rest
+        n = split($0, parts, /:/);
+        if (n >= 3) {
+            filename = parts[1];
+            line_number = parts[2];
+            line_content = substr($0, length(filename) + length(line_number) + 3);
+
+            # Replace the pattern in the line content
+            gsub(pattern, pattern_color pattern reset_color, line_content);
+
+            # Print the colored output
+            print filename_color filename reset_color ":" line_number_color line_number reset_color ":" line_content;
+        } else {
+            print $0;
+        }
+    }'"'"'
+}; _codesearch'
 alias cs='codesearch'
 
 # -----
