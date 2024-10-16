@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-basher_version="0.1.0"
+basher_version="0.1.1"
 
 working_repo='repo_name'
 repos_path='~/repos'
@@ -19,6 +19,13 @@ function basher(){
     echo ''
 }
 alias basher='basher'
+
+# -----
+# Correction aliases
+# -----
+alias cleear='clear'
+alias celar='clear'
+alias clar='clear'
 
 # -----
 # Workspaces aliases
