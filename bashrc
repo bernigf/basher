@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-basher_version="0.1.1"
+basher_version="0.1.2"
 
 working_repo='repo_name'
 repos_path='~/repos'
@@ -26,6 +26,10 @@ alias basher='basher'
 alias cleear='clear'
 alias celar='clear'
 alias clar='clear'
+alias cleaar='clear'
+alias cler='clear'
+alias cclear='clear'
+alias lls='ls'
 
 # -----
 # Workspaces aliases
@@ -351,3 +355,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# =====
+# Custom .bashrc
+# =====
+
