@@ -29,6 +29,7 @@ alias clar='clear'
 alias cleaar='clear'
 alias cler='clear'
 alias cclear='clear'
+alias xlear='clear'
 alias lls='ls'
 
 # -----
