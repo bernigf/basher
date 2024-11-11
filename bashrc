@@ -98,7 +98,7 @@ source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bas
 # -----
 # ls aliases
 # -----
-alias ls="ls -Glha --color=auto"
+alias ls="ls -lha --color=auto"
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
