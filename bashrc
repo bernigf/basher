@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-basher_version="0.1.4"
+basher_version="0.1.5"
 
 working_repo='repo_name'
 repos_path='~/repos'
@@ -30,6 +30,9 @@ alias cleaar='clear'
 alias cler='clear'
 alias cclear='clear'
 alias xlear='clear'
+alias clera='clear'
+alias cclear='clear'
+
 alias lls='ls'
 
 # -----
