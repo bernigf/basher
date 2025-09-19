@@ -101,8 +101,8 @@ alias gitsu="git config --global user.email $1"
 # source /usr/local/etc/bash_completion.d/git-completion.bash
 
 # enable tab completion for git on mac
-source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
-
+# source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
+source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
 # -----
 # ls aliases
 # -----
