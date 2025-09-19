@@ -43,13 +43,13 @@ eval "mv ~/.bashrc ~/.bashrc.$current_timestamp"
 echo "Copying $name files..."
 echo ""
 
-echo "Copying $file_1_name to $file_1_dest ..."
+echo "File 1 -> Copying $file_1_name to $file_1_dest ..."
 eval "cp $file_1_name $file_1_dest"
 
-if [ -f "$file_2_dest" ]; then
-    echo "$file_2_dest already exists. Skipping copy."
+if [ -f ~/.bashext ]; then
+    echo "File 2 -> ~/.bashext already exists. Skipping copy."
 else
-    echo "Copying $file_2_name to $file_2_dest ..."
+    echo "File 2 -> Copying $file_2_name to $file_2_dest ..."
     eval "cp $file_2_name $file_2_dest"
 fi
 
