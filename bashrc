@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-basher_version="0.1.5"
+basher_version="0.1.8"
 
 working_repo='repo_name'
 repos_path='~/repos'
@@ -19,6 +19,11 @@ function basher(){
     echo ''
 }
 alias basher='basher'
+
+# -----
+# Loads all the extensions from the .bashext file
+# -----
+source ~/.bashext
 
 # -----
 # Correction aliases
@@ -362,8 +367,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# =====
-# Custom .bashrc
-# =====
-

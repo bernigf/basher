@@ -1,0 +1,7 @@
+# =====
+# .bashext is a .bashrc extension file
+# =====
+
+export ENV_VAR_1=value_1
+
+alias dps='docker ps -a'
