@@ -1,5 +1,4 @@
 #!/bin/bash
-
 name="basher"
 version="0.1.0"
 
@@ -9,8 +8,8 @@ folder_colors="colors"
 file_1_name="./bashrc"
 file_1_dest="~/.bashrc"
 
-#file_2_name="./colors/nord.vim"
-#file_2_dest="~/$folder_main/$folder_colors/nord.vim"
+file_2_name="./bashext"
+file_2_dest="~/.bashext"
 
 #file_3_name="./colors/afterglow.vim"
 #file_3_dest="~/$folder_main/$folder_colors/afterglow.vim"
@@ -47,8 +46,12 @@ echo ""
 echo "Copying $file_1_name to $file_1_dest ..."
 eval "cp $file_1_name $file_1_dest"
 
-#echo "Copying $file_2_name to $file_2_dest ..."
-#eval "cp $file_2_name $file_2_dest"
+if [ -f "$file_2_dest" ]; then
+    echo "$file_2_dest already exists. Skipping copy."
+else
+    echo "Copying $file_2_name to $file_2_dest ..."
+    eval "cp $file_2_name $file_2_dest"
+fi
 
 #echo "Copying $file_3_name to $file_3_dest ..."
 #eval "cp $file_3_name $file_3_dest"
