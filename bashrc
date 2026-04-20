@@ -90,10 +90,14 @@ alias cs='codesearch'
 # -----
 # Git related aliases
 # -----
+# list git commits in current branch that are not in main branch
 alias gitlc="git log --format='%h %Cgreen%ar%Creset %s' $(git rev-parse --abbrev-ref HEAD) --not $(git merge-base $(git rev-parse --abbrev-ref HEAD) main)"
+# list git branches with date and author
 alias gitlb="git for-each-ref --sort=-committerdate refs/remotes/origin --format='%(committerdate:relative)%09 %(refname:short)'"
-alias gitu="git config user.email"
-alias gitsu="git config --global user.email $1"
+# list git commits with date and author
+alias gitld="git log -10 --pretty=format:"%h %an %ad" --date=iso"
+alias gitu="git config user.email" # get git user email
+alias gitsu="git config --global user.email $1" # set git user email
 
 # enable tab completion for git on linux
 # source /usr/share/bash-completion/completions/git
